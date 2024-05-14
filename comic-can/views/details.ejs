@@ -1,0 +1,23 @@
+
+<h2><%= post.title  %></h2>
+<img src="<%= post.image_url  %>" >
+
+
+<form action="/posts/<%=post.id%>?_method=delete" method="post">
+    <button>delete</button>
+</form>
+
+<a href="/posts/<%=post.id%>/edit">Edit</a>
+
+<form action="/comments" method="post">
+    <label for="comment"></label>
+    <textarea name="content"></textarea>
+    <input type="hidden" name="post_id" value ="<%= post.id%>">
+    <button>post</button>
+</form>
+
+<% for (let comment of comments)  { %>
+    <p><%= comment.content  %></p>
+    <p> <%= comment.email %></p>
+    <hr> <!--horizontal rule (divides sections with lines)-->
+    <% } %>

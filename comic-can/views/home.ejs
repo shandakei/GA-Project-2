@@ -1,0 +1,21 @@
+
+
+<div class="all-posts">
+    <% for (let post of posts) {%> 
+        
+        <div class="ui-card">
+     
+            
+            <section>
+            <h2><a href="/posts/<%= post.id %>">
+    
+                
+                <%= post.title%>
+            </a>
+            </h2>
+            </section>
+        </div><!--ui-card-->
+    
+    <%}%>
+    
+    </div>

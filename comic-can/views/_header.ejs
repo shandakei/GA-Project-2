@@ -1,0 +1,21 @@
+<div class="header">
+    <h1><a href="/">ComiCan</a></h1>
+    <nav>
+   <a href="/share">share</a>
+
+   <% if (isLoggedIn) { %>
+
+    <p>Logged in as: <%= currentUser.email  %></p>
+
+    <form action="/logout?_method=delete" method="post">
+        <button>Logout</button>
+    </form>
+    
+    <% } else { %>
+        <h4><a href="/login">Login</a></h4>
+    <%}%>
+
+
+
+</nav>
+</div><!--header-->
