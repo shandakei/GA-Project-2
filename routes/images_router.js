@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require ('../db');
 const setCurrentUser = require('../middlewares/set_current_user');
-
+const upload = require('../middlewares/upload')
 
 
 router.get('/images', (req, res) => {
@@ -37,18 +37,20 @@ router.get('/posts/:postId/images', (req, res) => {
 })
 
 
-router.post('/posts/:postId/images', (req, res) => { //removed images from path
-    const { image_url } = req.body
+router.post('/posts/:postId/images', upload.single('upload_file'),(req, res) => { 
+    const { image_url } = req.file.path
+    const path = req.file.path //becomes req.file
     const userId = req.session.userId
     const postId = req.params.postId;
 
     const sql = `
-    INSERT INTO images (image_url, user_id, post_id)
-    VALUES ($1, $2, $3)
+    INSERT INTO images (image_url, file_path, user_id, post_id)
+    VALUES ($1, $2, $3, $4)
     RETURNING *; 
     `
-    console.log(userId);
-    db.query(sql, [image_url, userId, postId], (err, result) => {
+    console.log('userId =',userId);
+    console.log(sql, 'sql test line 52');
+    db.query(sql, [image_url, path, userId, postId], (err, result) => {
         if (err) console.log(err);
         
         console.log('image inserted', result.rows[0]);
@@ -57,6 +59,6 @@ router.post('/posts/:postId/images', (req, res) => { //removed images from path
     })
 })
 
-//no form that calls this route
+
 
 module.exports = router

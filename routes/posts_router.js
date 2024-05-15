@@ -65,7 +65,7 @@ router.post('/posts', ensureLoggedIn, (req, res) => {
  
     const description = req.body.description
 
-    const userId = req.session.user_id
+    const userId = req.session.userId
 
     const sql = `INSERT INTO posts   
     (title, description, user_id)

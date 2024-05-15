@@ -12,11 +12,10 @@
 
 <a href="/posts/<%=post.id%>/edit">Edit</a>
 
-<form action="/posts/<%=post.id%>/images" method="post">
-    <label for="images"></label>
-    <input type="file" name="images">
-   
-    <button>submit image(s)</button>
+<form action="/posts/<%= post.id %>/images" method="post" enctype="multipart/form-data">
+    <input type="file" name="upload_file">
+    <button>submit</button>
+
 </form>
 
 <form action="/comments" method="post">
@@ -26,6 +25,8 @@
     <button>post</button>
 </form>
 
+<h2><%= post.description  %></h2>
+<br>
 <% for (let comment of comments)  { %>
     <p><%= comment.content  %></p>
     <p> <%= comment.email %></p>

@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
             console.log(err);
         }
         const posts = result.rows
-        console.log(posts);
+        
 
         res.render('home', { posts : posts })
     })
