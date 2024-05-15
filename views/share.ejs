@@ -1,12 +1,15 @@
 <br>
 <h2>share your work</h2>
 <br>
-<form action="/posts" method="post">
+<form action="/posts" method="post" enctype="multipart/form-data">
     <label for="">title</label>
     <input type="text" name="title">
 
     <label for="">description</label>
     <input type="text" name = 'description'>
+
+    <label for="">Select images:</label>
+    <input type="file" name="images" multiple>
     
 
 

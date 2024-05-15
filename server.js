@@ -13,6 +13,7 @@ const sessionRouter = require('./routes/session_router')
 const homeRouter = require('./routes/home_router')
 const postsRouter = require('./routes/posts_router')
 const commentsRouter = require('./routes/comments_router')
+const imagesRouter = require('./routes/images_router')
 const session = require('express-session')
 const setCurrentUser = require('./middlewares/set_current_user')
 const ensureLoggedIn = require('./middlewares/ensureLoggedIn')
@@ -41,9 +42,9 @@ app.use(setCurrentUser)
 app.use(homeRouter)
 app.use(sessionRouter)
 app.use(ensureLoggedIn)
-app.use(postsRouter)
+app.use(postsRouter) //change to view but not change
 app.use(commentsRouter)
-
+app.use(imagesRouter)
 
 app.listen(port, () => {
     console.log(`----------${port} IS LIVE-----------`);

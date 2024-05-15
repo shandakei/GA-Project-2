@@ -17,23 +17,39 @@ router.get('/posts/:id', (req, res) => {
     WHERE post_id = $1;
     `
 
+    const imagesSQL = `
+    SELECT * FROM images
+    JOIN users
+    ON (images.user_id = users.id)
+    WHERE post_id = $1
+    `
+    console.log('reached line 26 postrouter');
     db.query(sql, [req.params.id], (err, result) => {
-        if (err) {
-            console.log(err);
-        }
+            if (err) {
+                console.log(err);
+            }
+                const post = result.rows[0]
+                console.log(post, 'line 32, posts router');
 
-        
-        const post = result.rows[0]
+            db.query(imagesSQL, [req.params.id], (err, imgResult) => {
+                if (err) {
+                    console.log(err);
+                }
 
-        db.query(commentsSQL, [req.params.id], (err, result) =>{
-            if (err) console.log(err);
+                const images = imgResult.rows
+                console.log(images);
 
-            const comments = result.rows
-
-
-        res.render('details', { post : post, comments : comments })
+                db.query(commentsSQL, [req.params.id], (err, result) =>{
+                    if (err) {
+                        console.log(err);
+                    }
+                    const comments = result.rows
+                    
+                    
+                    res.render('details', { post : post, comments : comments, images: images })
+                })
+         })
     })
-})
 })
 
 

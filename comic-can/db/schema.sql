@@ -13,7 +13,7 @@ CREATE TABLE users (
     id SERIAL PRIMARY KEY, 
     title VARCHAR(200), 
     description TEXT,
-    user_id INTEGER --fk?
+    user_id INTEGER 
 );
 
 INSERT INTO posts (title, description, image_url) VALUES ('test', 'lorem lorem lorem', 'https://fakeimg.pl/600x400');

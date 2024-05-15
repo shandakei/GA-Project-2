@@ -1,6 +1,9 @@
 
 <h2><%= post.title  %></h2>
-<img src="<%= post.image_url  %>" >
+
+<% for (let image of images) {%> 
+    <img src="<%= image.image_url  %>" alt="">
+<%}%>
 
 
 <form action="/posts/<%=post.id%>?_method=delete" method="post">
