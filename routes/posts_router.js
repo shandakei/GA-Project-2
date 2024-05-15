@@ -29,7 +29,7 @@ router.get('/posts/:id', (req, res) => {
                 console.log(err);
             }
                 const post = result.rows[0]
-                console.log(post, 'line 32, posts router');
+                console.log('line 32, posts router');
 
             db.query(imagesSQL, [req.params.id], (err, imgResult) => {
                 if (err) {
@@ -65,14 +65,16 @@ router.post('/posts', ensureLoggedIn, (req, res) => {
  
     const description = req.body.description
 
+    const userId = req.session.user_id
+
     const sql = `INSERT INTO posts   
-    (title, description)
+    (title, description, user_id)
     VALUES 
-    ($1, $2)
-    `;
+    ($1, $2, $3)
+    ;`
 
 
-    db.query(sql, [title, description], (err, result) => {
+    db.query(sql, [title, description, userId], (err, result) => {
         if (err) {
             console.log(err);
         }

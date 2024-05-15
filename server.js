@@ -41,8 +41,8 @@ app.use(setCurrentUser)
 
 app.use(homeRouter)
 app.use(sessionRouter)
+app.use(postsRouter) //ensurelogin to view but not change
 app.use(ensureLoggedIn)
-app.use(postsRouter) //change to view but not change
 app.use(commentsRouter)
 app.use(imagesRouter)
 

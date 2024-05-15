@@ -12,6 +12,13 @@
 
 <a href="/posts/<%=post.id%>/edit">Edit</a>
 
+<form action="/posts/<%=post.id%>/images" method="post">
+    <label for="images"></label>
+    <input type="file" name="images">
+   
+    <button>submit image(s)</button>
+</form>
+
 <form action="/comments" method="post">
     <label for="comment"></label>
     <textarea name="content"></textarea>
