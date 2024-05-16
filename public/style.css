@@ -26,3 +26,12 @@ body {
     gap: 2rem;
     margin: 1rem 0;
   }
+
+  #fav-btn {
+    width: 7%;
+    height: 5%;
+  }
+  #fav-btn img {
+    width: 7%;
+    height: 5%;
+  }

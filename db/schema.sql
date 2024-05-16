@@ -43,3 +43,38 @@ CREATE TABLE comments (
 
 ALTER TABLE images
 ADD COLUMN file_path TEXT;
+
+
+
+CREATE TABLE favourites (
+    id SERIAL PRIMARY KEY,
+    post_id INTEGER NOT NULL,
+    title VARCHAR(200),
+    FOREIGN KEY (id) REFERENCES users (id) ON DELETE CASCADE,
+    FOREIGN KEY (post_id) REFERENCES posts (id) ON DELETE CASCADE 
+);
+
+-- let sql = `
+--         SELECT posts.id, posts.title
+--         FROM favourites
+--         JOIN posts ON favourites.post_id = posts.id
+--         WHERE favourites.user_id = $1;
+--     `;
+--  let sql = `
+--         INSERT INTO favourites (user_id, post_id)
+--         VALUES ($1, $2)
+--         RETURNING id;  
+--     `
+
+
+
+-- let sql = `SELECT posts.title, posts.id as post_id
+--                FROM favourites 
+--                JOIN posts ON favourites.post_id = posts.id 
+--                WHERE favourites.user_id = $1`;
+
+
+ALTER TABLE favourites ADD COLUMN user_id INTEGER;
+ALTER TABLE favourites ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;
+
+UPDATE users SET user_name = 'Alexander' WHERE id = 1;

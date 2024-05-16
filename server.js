@@ -16,12 +16,13 @@ const commentsRouter = require('./routes/comments_router')
 const imagesRouter = require('./routes/images_router')
 const session = require('express-session')
 const setCurrentUser = require('./middlewares/set_current_user')
-
+const favourites = require('./middlewares/favourites')
 
 
 
 
 app.set('view engine', 'ejs')
+
 app.use(expressLayout)
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
@@ -44,6 +45,8 @@ app.use(sessionRouter)
 app.use(postsRouter) //ensurelogin to view but not change
 app.use(commentsRouter)
 app.use(imagesRouter)
+app.use(favourites)
+
 
 app.listen(port, () => {
     console.log(`----------${port} IS LIVE-----------`);
