@@ -16,7 +16,7 @@ const commentsRouter = require('./routes/comments_router')
 const imagesRouter = require('./routes/images_router')
 const session = require('express-session')
 const setCurrentUser = require('./middlewares/set_current_user')
-const ensureLoggedIn = require('./middlewares/ensureLoggedIn')
+
 
 
 
@@ -42,7 +42,6 @@ app.use(setCurrentUser)
 app.use(homeRouter)
 app.use(sessionRouter)
 app.use(postsRouter) //ensurelogin to view but not change
-app.use(ensureLoggedIn)
 app.use(commentsRouter)
 app.use(imagesRouter)
 

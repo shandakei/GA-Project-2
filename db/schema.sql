@@ -39,3 +39,7 @@ CREATE TABLE comments (
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
     FOREIGN KEY (post_id) REFERENCES posts (id) ON DELETE CASCADE  
 );
+
+
+ALTER TABLE images
+ADD COLUMN file_path TEXT;

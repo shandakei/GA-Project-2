@@ -13,7 +13,7 @@
 <a href="/posts/<%=post.id%>/edit">Edit</a>
 
 <form action="/posts/<%= post.id %>/images" method="post" enctype="multipart/form-data">
-    <input type="file" name="upload_file">
+    <input type="file" name="upload_file" multiple>
     <button>submit</button>
 
 </form>

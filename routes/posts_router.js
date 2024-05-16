@@ -1,7 +1,7 @@
 const express = require('express')
 const db = require('../db/index.js')  
-const ensureLoggedIn = require('../middlewares/ensureLoggedIn.js')
 const router = express.Router()
+const ensureLoggedIn = require('../middlewares/ensureLoggedIn')
 
 
 router.get('/posts/:id', (req, res) => {
@@ -84,7 +84,7 @@ router.post('/posts', ensureLoggedIn, (req, res) => {
    
 })
 
-router.delete('/posts/:id', (req, res) => {
+router.delete('/posts/:id', ensureLoggedIn, (req, res) => {
 
     let sql = `DELETE FROM posts WHERE id = $1; `
 
@@ -118,7 +118,7 @@ router.get("/posts/:id/edit", (req, res) => {
 
 })
 
-router.put('/posts/:id', (req, res) => {
+router.put('/posts/:id', ensureLoggedIn, (req, res) => {
  
     const title = req.body.title
     const description = req.body. description

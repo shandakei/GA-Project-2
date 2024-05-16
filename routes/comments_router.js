@@ -2,9 +2,11 @@ const express = require('express')
 const router = express.Router()
 const db = require ('../db');
 const setCurrentUser = require('../middlewares/set_current_user');
+const ensureLoggedIn = require('../middlewares/ensureLoggedIn')
 
 
-router.post('/comments', (req, res) => {
+
+router.post('/comments', ensureLoggedIn, (req, res) => {
     const content = req.body.content
     const postId = req.body.post_id
 

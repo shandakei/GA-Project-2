@@ -3,6 +3,8 @@ const router = express.Router()
 const db = require ('../db');
 const setCurrentUser = require('../middlewares/set_current_user');
 const upload = require('../middlewares/upload')
+const ensureLoggedIn = require('../middlewares/ensureLoggedIn')
+
 
 
 router.get('/images', (req, res) => {
@@ -37,26 +39,28 @@ router.get('/posts/:postId/images', (req, res) => {
 })
 
 
-router.post('/posts/:postId/images', upload.single('upload_file'),(req, res) => { 
-    const { image_url } = req.file.path
-    const path = req.file.path //becomes req.file
+router.post('/posts/:postId/images', ensureLoggedIn, upload.array('upload_file'),(req, res) => { 
     const userId = req.session.userId
     const postId = req.params.postId;
 
-    const sql = `
-    INSERT INTO images (image_url, file_path, user_id, post_id)
-    VALUES ($1, $2, $3, $4)
-    RETURNING *; 
-    `
-    console.log('userId =',userId);
-    console.log(sql, 'sql test line 52');
-    db.query(sql, [image_url, path, userId, postId], (err, result) => {
-        if (err) console.log(err);
-        
-        console.log('image inserted', result.rows[0]);
+    req.files.forEach(file => {
+        // const { image_url } = file.path
+        const path = file.path //becomes req.file
 
-        res.redirect(`/posts/${postId}`)
+        const sql = `
+        INSERT INTO images (image_url, file_path, user_id, post_id)
+        VALUES ($1, $2, $3, $4)
+        RETURNING *; 
+        `
+        console.log('userId =',userId);
+        console.log(sql, 'sql test line 52');
+        db.query(sql, [path, path, userId, postId], (err, result) => {
+            if (err) console.log(err);
+            
+            console.log('image inserted', result.rows[0]);
+        })
     })
+    res.redirect(`/posts/${postId}`)
 })
 
 
