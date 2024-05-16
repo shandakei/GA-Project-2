@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require ('../db');
-const setCurrentUser = require('../middlewares/set_current_user');
+// const setCurrentUser = require('../middlewares/set_current_user');
 
 
 router.get('/', (req, res) => {

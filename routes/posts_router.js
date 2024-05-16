@@ -4,6 +4,8 @@ const router = express.Router()
 const ensureLoggedIn = require('../middlewares/ensureLoggedIn')
 
 
+
+
 router.get('/posts/:id', (req, res) => {
    
     const sql = `
@@ -54,6 +56,7 @@ router.get('/posts/:id', (req, res) => {
 
 
 router.get('/share', ensureLoggedIn, (req, res) => {
+    
     res.render('share')
 })
 

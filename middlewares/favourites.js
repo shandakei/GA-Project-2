@@ -21,29 +21,34 @@ router.post('/favourites', (req, res) => {
         if (err) console.log(err);
 
 
-        result.redirect(`/posts/${postId}`)
+        res.redirect(`/profile`)
 
     })
 })
+
 
 router.get('/profile', (req, res) => {
+    const userId = req.session.userId;
 
-    const userId = req.session.userId
+    let sql = `
+    SELECT favourites.title, images.file_path
+    FROM favourites
+    JOIN posts ON favourites.post_id = posts.id
+    LEFT JOIN images ON posts.id = images.post_id
+    WHERE favourites.user_id = $1;`
 
-
-    let sql = `SELECT * FROM favourites
-    WHERE user_id = $1
-    `
-
-    
     db.query(sql, [userId], (err, result) => {
-        if (err) console.log(err);
+        if (err) {
+            console.error(err);
+            
+        }
 
-        const favourites = result.rows
+        const favourites = result.rows;
         console.log(favourites);
-        
-        res.render('profile', { favourites : favourites })
+
+        res.render('profile', { favourites: favourites })
     })
 })
+
 
 module.exports = router

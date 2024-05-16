@@ -8,6 +8,7 @@ const port = 9090
 const expressLayout = require('express-ejs-layouts')
 const methodOverride = require('method-override')
 
+const setCurrentUser = require('./middlewares/set_current_user')
 
 const sessionRouter = require('./routes/session_router')
 const homeRouter = require('./routes/home_router')
@@ -15,7 +16,6 @@ const postsRouter = require('./routes/posts_router')
 const commentsRouter = require('./routes/comments_router')
 const imagesRouter = require('./routes/images_router')
 const session = require('express-session')
-const setCurrentUser = require('./middlewares/set_current_user')
 const favourites = require('./middlewares/favourites')
 
 

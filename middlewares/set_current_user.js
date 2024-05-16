@@ -25,9 +25,10 @@ function setCurrentUser(req, res, next) {
 
         res.locals.currentUser = user
         res.locals.isLoggedIn = true
+        
+        next()
     })
 
-    next()
 }
 
 module.exports = setCurrentUser

@@ -78,3 +78,10 @@ ALTER TABLE favourites ADD COLUMN user_id INTEGER;
 ALTER TABLE favourites ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;
 
 UPDATE users SET user_name = 'Alexander' WHERE id = 1;
+
+let sql = `
+SELECT favourites.title, images.file_path
+FROM favourites
+JOIN posts ON favourites.post_id = posts.id
+JOIN images ON posts.id = images.post_id
+WHERE favourites.user_id = $1;`

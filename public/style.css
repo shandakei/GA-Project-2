@@ -1,37 +1,115 @@
 * {
     box-sizing:border-box;
     margin: 0;
+    text-decoration: none;
 }
 
 body {
     border: 1px solid black;
     background-color: goldenrod;
     text-align: center;
+    background-image: url("/cloud-swirls.jpg");
+    background-size: cover;
+    color: aliceblue;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    
+
 }
 
+
+
 .container {
-    /* max-width: 500px; */
     margin: 0 auto;
     height: 100%;
+    align-items: center;
   }
 
-  img {
-    width: 300px;
-    height: 500px;
-  }
+img {
+  width: 300px;
+  height: 500px;
+}
 
-  .all-posts {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 1rem 0;
-  }
+body::before,
+body::after {
+    content: "Lorem ipsum dolor sit amet consectetur adipiscing elit ac nulla cubilia, posuere cras vestibulum aptent lectus condimentum sapien inceptos. Fames fermentum himenaeos sed hac faucibus accumsan cras sociosqu tempus pretium, proin justo magna nec ultricies ac quis lectus consequat varius hendrerit, sagittis volutpat fusce praesent integer viverra nascetur facilisi egestas. A tellus vivamus commodo habitasse ultricies ad montes, eget placerat est hac pulvinar sociosqu orci pharetra, vel eros netus per id nisl. Primis fusce fames habitasse pulvinar varius phasellus dictumst nec sociosqu, lacinia mattis eleifend volutpat ridiculus senectus felis vulputate, augue dapibus laoreet potenti viverra natoque nam taciti. Fames luctus porttitor hendrerit nulla libero molestie pellentesque, nam sapien non eleifend placerat eu vehicula dignissim, ultrices vel suscipit vulputate hac senectus. Vel turpis ornare vestibulum habitant venenatis tincidunt senectus aliquet consequat aenean, tempus eros auctor euismod fames accumsan malesuada est nullam, condimentum enim pretium cum himenaeos ante nascetur lacinia vitae. Ut per auctor dictumst magna convallis phasellus tellus fusce, pharetra penatibus facilisis libero condimentum accumsan suscipit quisque rutrum, fermentum sem inceptos facilisi faucibus morbi porta.Id leo mus consequat cursus porta fames curabitur, augue potenti enim primis lacinia torquent a nulla, orci arcu urna malesuada metus venenatis. Fusce dis risus sodales proin dui ultricies cras libero potenti, est auctor sollicitudin pretium sapien purus a maecenas, id pellentesque non bibendum ligula platea vivamus dignissim. Id commodo dictumst dignissim magna aenean natoque integer bibendum, ullamcorper porttitor convallis dapibus aliquam aptent tincidunt lectus platea, placerat sagittis laoreet ultricies vehicula varius quisque. Mus ad malesuada euismod nascetur vehicula commodo lobortis dictum, eu pharetra morbi tristique volutpat bibendum taciti lacus, libero convallis viverra rhoncus fringilla imperdiet aenean. Faucibus eros sollicitudin odio rutrum mattis conubia ultrices per enim ac eleifend maecenas, aliquam sapien iaculis cursus magna arcu class inceptos ullamcorper dui viverra. Volutpat porta ante nisi mollis eleifend hac porttitor augue, dis nec nam natoque pharetra tempus nisl, ullamcorper lectus nullam facilisis leo aliquam auctor. Torquent commodo quisque pulvinar ac sagittis primis class integer, feugiat felis montes taciti tincidunt conubia et, rhoncus penatibus pellentesque ligula nulla eros a. Varius lobortis et orci urna eget sodales ante penatibus elementum porta sapien platea class ornare libero, parturient sociosqu phasellus suscipit vitae sociis pulvinar ac dictumst facilisis tellus nostra senectus. Pharetra nunc cursus dictumst pretium dictum nec senectus himenaeos, habitant massa maecenas ligula odio fames. Primis scelerisque elementum dapibus curae posuere, cum suspendisse nibh iaculis, non leo blandit commodo. Sem condimentum ut eleifend fames et habitant tellus rhoncus scelerisque conubia eu praesent, lacus arcu torquent sagittis vel facilisi nulla nunc tempus pharetra tortor. Blandit vivamus odio platea cubilia fusce vestibulum, imperdiet metus facilisi ultrices natoque lacinia varius, commodo at vulputate eu sed. Iaculis montes suspendisse pharetra fames cum sapien gravida egestas sociis, integer posuere mus nam molestie semper auctor fringilla ligula volutpat, aliquet justo pretium pulvinar orci netus natoque inceptos.Est enim sodales ullamcorper nullam facilisi tempor lacus penatibus ad bibendum, blandit accumsan aenean ultricies ante nibh conubia magnis dictumst lectus, condimentum potenti donec rhoncus mattis et nec euismod semper. Taciti nisl felis congue netus nisi primis aenean augue, aliquam gravida rhoncus est mauris magnis inceptos euismod, semper ultricies tristique tempus eget nec sodales. Lacinia eu nisi interdum cubilia pretium auctor duis ac montes class nostra ligula tincidunt, volutpat lobortis sem a dictum leo etiam massa conubia dui tempus. Eget dui eros hendrerit sociis auctor augue cubilia lacinia natoque nunc faucibus, penatibus proin lectus nisl sapien phasellus ac mattis porttitor diam, gravida mus habitasse tempus potenti lobortis varius convallis aenean ut. Vel inceptos laoreet praesent parturient mollis per eu mauris litora nullam, turpis phasellus lobortis nisi dui donec ridiculus cubilia diam, duis dis at fermentum posuere nunc ultricies accumsan rhoncus. Pharetra sem habitant morbi duis massa senectus, nascetur parturient lacinia placerat netus eget, rutrum tristique metus proin facilisi. Suscipit himenaeos turpis vivamus ultrices aenean curabitur class inceptos maecenas, platea dictum viverra elementum orci condimentum sem praesent montes, laoreet ornare rhoncus nisi feugiat quis cum quisque. Mus nostra praesent pellentesque viverra nisl proin tincidunt augue justo, inceptos parturient tristique primis varius suspendisse dapibus at phasellus enim, lacus aliquam sociis congue placerat fames lobortis quam.Eget magnis netus ad litora nostra per natoque dictumst quisque hac, aliquam vivamus imperdiet curabitur curae conubia libero congue himenaeos iaculis viverra, at parturient sem massa rutrum ligula sagittis penatibus sed. Nam hac tempor sociis nulla velit natoque maecenas nullam sociosqu rutrum faucibus, ullamcorper sapien vehicula convallis potenti habitasse fames venenatis urna interdum imperdiet, purus tortor nisl nec scelerisque nibh justo lectus senectus nunc. Nec nunc odio quam aenean mattis tellus interdum, ac dis sagittis rhoncus tempor parturient cursus class, pellentesque at aliquam massa nisi hendrerit. Condimentum etiam neque interdum mauris volutpat fames ornare mus molestie euismod quisque justo blandit pellentesque, tempus taciti accumsan dictum nascetur in dignissim eget eleifend eu sociis praesent. Himenaeos quam morbi metus a purus imperdiet, cursus feugiat faucibus sociis iaculis turpis nascetur, quisque enim id mattis duis. Varius ad et mollis nec commodo torquent quisque arcu gravida curabitur ut, in aptent sodales tellus egestas dignissim ac magnis nisl convallis vestibulum, cursus nostra diam hac odio mauris tempus non facilisi condimentum. Fames ridiculus risus arcu odio nunc urna class eget cras integer, commodo tortor et aliquam cubilia cursus hendrerit laoreet. Parturient primis tempor sociis laoreet convallis ultricies, fames nulla tortor nisl lacus, est donec placerat cum cras. Purus nisl nostra auctor varius libero orci ante torquent, cubilia taciti volutpat suspendisse eleifend curabitur netus platea, mi phasellus praesent per molestie hac habitasse.Faucibus ante vehicula lacinia class rhoncus dignissim purus natoque montes ultrices viverra quis turpis pharetra, facilisis fringilla porttitor euismod nisl accumsan justo et massa gravida non commodo mi. Quam facilisis malesuada magnis turpis suscipit platea felis est a cursus, vehicula justo gravida scelerisque egestas metus lacus interdum enim erat dignissim, blandit fames vulputate ut congue volutpat sapien netus nisl. Convallis enim ultrices senectus libero orci quis mi aptent faucibus, fermentum ullamcorper felis primis vivamus litora vulputate vestibulum elementum lacinia, interdum fringilla vehicula eu per curae donec neque. Molestie cursus sem volutpat enim sed sociosqu natoque mollis justo, et consequat scelerisque porttitor risus suscipit gravida varius, leo tortor dui laoreet nostra tempor nunc ullamcorper. Cursus ultricies cubilia nostra dapibus sed congue dignissim elementum porta, integer massa hac nisi habitasse euismod ornare eleifend, orci pellentesque tortor torquent dictum sollicitudin felis quis. Porttitor aliquet luctus vel pulvinar rhoncus, purus pretium proin nunc curabitur erat, et massa habitasse aptent. Fringilla sapien orci ut morbi volutpat neque ullamcorper pulvinar vehicula, curabitur mi lobortis litora inceptos aptent mattis montes conubia posuere, platea at molestie viverra ante aliquam sociosqu et.Sociosqu habitant laoreet nulla ornare ullamcorper sodales cras luctus, metus feugiat non praesent euismod hac pulvinar, justo tempor congue ridiculus vestibulum ad porttitor. Proin vehicula dis cras mattis malesuada, montes vel posuere rutrum venenatis purus, condimentum magnis mollis vivamus. Fames in proin sed facilisi tempor scelerisque praesent senectus himenaeos sodales, nisi tellus hendrerit luctus elementum primis congue mus pulvinar diam, nam potenti vehicula mi magnis commodo inceptos accumsan dictum. Odio mus commodo nunc arcu curabitur neque pharetra molestie sed, quam ante lobortis cursus elementum tristique tellus erat curae maecenas, consequat rhoncus vehicula aenean congue eu faucibus conubia. Neque morbi etiam ornare feugiat sed lacus imperdiet dui nisi, vivamus et nullam suscipit sodales vehicula nam interdum, felis dignissim ultrices rutrum eros varius eget semper. Nam netus varius habitasse vivamus litora ornare, turpis fusce felis sociis neque tristique conubia, dictumst ullamcorper hac tempor bibendum. Magnis viverra nam sapien ante curabitur auctor, scelerisque conubia placerat tincidunt sodales felis, egestas condimentum platea phasellus augue. Vestibulum consequat vel in curae, nibh varius sodales sapien potenti, est nostra mus. Iaculis hendrerit nisl habitasse commodo metus augue odio massa id integer, fusce est natoque orci aliquet ultricies sem cubilia eu, libero ac pulvinar quam faucibus urna magnis morbi euismod.Arcu tempus tempor sem gravida quam neque, maecenas nisi aliquet vehicula tristique ut magna, facilisi condimentum parturient nostra libero. Rutrum inceptos laoreet placerat egestas parturient penatibus pellentesque accumsan integer cubilia, aptent vivamus massa fames orci himenaeos donec eleifend nisl, duis posuere proin eros vel congue sodales est senectus. Et ridiculus senectus ante condimentum magna nunc dictumst orci, porttitor enim porta ac aenean purus sapien montes, ad viverra vulputate semper suspendisse netus mi. Nostra nec varius sem blandit accumsan iaculis fermentum vehicula, magna libero eleifend ac erat parturient placerat, consequat aliquet purus proin nunc fringilla dictumst. Orci tortor condimentum faucibus a malesuada feugiat mattis proin nam, ultrices nullam eleifend aliquam viverra fusce massa facilisis ridiculus ullamcorper, interdum pulvinar vitae natoque ornare mollis placerat senectus. Nascetur cursus fermentum curabitur euismod aliquet dictum convallis mattis, felis bibendum egestas nulla facilisi est mus viverra ridiculus, inceptos risus pharetra urna metus hendrerit volutpat. Nisi a mi sed in malesuada ornare libero morbi velit eu fames suscipit fermentum, potenti himenaeos proin orci hac facilisis neque sapien litora ligula primis. Iaculis neque nunc aenean dignissim gravida ligula in lobortis congue, curae diam vulputate eleifend proin nec pellentesque natoque praesent eu, sapien integer tortor tincidunt vehicula consequat posuere sed.Aliquet morbi risus nostra venenatis cubilia nulla, ornare ante ullamcorper nullam phasellus montes, facilisis congue imperdiet quis convallis. Cursus nostra faucibus dictumst lobortis sociis ante ad suscipit torquent proin cum, ac erat viverra placerat porta interdum rutrum inceptos sagittis. Rhoncus eros ornare hac volutpat phasellus etiam magna sodales suspendisse condimentum placerat justo taciti, ligula a nullam felis blandit porta pellentesque nec odio dui cursus. Non ut euismod senectus magna lobortis fames aliquet iaculis platea fringilla orci sagittis, lacinia vestibulum viverra semper mus felis phasellus pulvinar eget netus. Fusce volutpat pellentesque metus tristique consequat ligula dis non, porta vitae eget proin luctus vehicula taciti, quisque phasellus mus ornare bibendum morbi nisl. Feugiat felis tristique aliquam netus natoque aenean tempus facilisi lacus tincidunt augue molestie, interdum rhoncus massa sapien eget potenti inceptos duis ullamcorper habitant laoreet. Curabitur malesuada suscipit integer mus rhoncus magnis semper diam proin netus scelerisque, himenaeos vivamus nibh ad a quam taciti cursus at orci gravida non, hac arcu sociosqu tortor dignissim purus augue morbi odio blandit. Metus odio vulputate scelerisque eu fermentum tempus id sem imperdiet, convallis cras fusce neque tortor vehicula sed risus ante auctor, vivamus diam ac libero felis aliquet hac a.Hendrerit conubia integer cras praesent aenean lacus urna euismod senectus, enim inceptos pulvinar id venenatis mollis fringilla viverra diam aliquet, egestas eleifend ad fames rhoncus ut proin mattis. Imperdiet cras diam cubilia inceptos natoque nisi curabitur quis habitant, primis praesent convallis sociosqu dictum ornare viverra nostra, placerat fermentum tortor mus pellentesque pulvinar egestas tincidunt. Dapibus penatibus proin etiam rutrum ut mus commodo vel posuere, dictumst dignissim velit est auctor torquent tristique tellus montes maecenas, imperdiet cursus curae ornare nulla placerat gravida fusce. Proin montes in potenti vivamus curabitur rutrum non mattis mi taciti turpis, aenean morbi class lobortis leo sed facilisi conubia diam pellentesque integer nostra, semper pulvinar sollicitudin cum sem erat ridiculus facilisis sagittis vulputate. Facilisi sollicitudin nullam posuere quisque commodo facilisis velit netus, mollis at ornare eleifend arcu phasellus lobortis porttitor sociosqu, a nec gravida nostra lacus vehicula cras. Diam vehicula eget posuere mollis consequat montes, rhoncus quam malesuada class quis dictum massa, curabitur vel nostra sem aliquam.Habitasse pharetra platea tortor ridiculus tellus iaculis fermentum donec dictumst torquent, vivamus dis non hendrerit cum dapibus diam dictum a, blandit sodales rutrum quis erat malesuada pellentesque class eleifend. Velit luctus urna feugiat diam habitasse justo, id laoreet sem venenatis lacinia himenaeos ut, odio penatibus morbi leo suscipit. Donec eros aliquet arcu eu habitant enim maecenas euismod facilisi, fermentum velit parturient tincidunt platea nullam class habitasse, ornare litora pulvinar fringilla facilisis ad dapibus suscipit. Sollicitudin nisi mollis dictum viverra non metus proin mi rhoncus netus potenti enim urna etiam felis, malesuada cursus id ante ad auctor nisl duis dictumst vitae aliquet iaculis eleifend. Ante bibendum ac tellus purus a interdum proin augue, curae sagittis et quam tincidunt dictumst accumsan, conubia elementum ridiculus ullamcorper hendrerit at semper. Donec odio consequat nisi vivamus taciti quam sodales montes mus ad ultrices pretium, proin sollicitudin purus per aenean habitant viverra etiam vehicula luctus. Curabitur nulla litora condimentum viverra facilisi pharetra, parturient dictumst himenaeos ultricies tortor etiam, tristique hac bibendum vestibulum pellentesque. Ac sem bibendum aliquam curae non dictumst eros scelerisque auctor facilisis magnis, facilisi neque netus leo augue nam lectus primis fermentum id purus, dui tempor viverra sociis molestie ultrices litora diam ante consequat.Class velit malesuada torquent nec mattis facilisi, metus quis vitae facilisis posuere, etiam ultrices aliquet vulputate dui. Per tempus at mi natoque nisi tortor nam aliquam lobortis sollicitudin cum, vestibulum arcu neque varius libero egestas netus fusce habitant suspendisse, molestie tristique ante primis ullamcorper proin integer porttitor lectus penatibus. Semper arcu senectus porttitor faucibus auctor felis dui enim interdum, blandit etiam eleifend nascetur tempus dapibus tristique urna taciti ad, ornare commodo bibendum condimentum mattis aptent sociosqu phasellus. Lectus suscipit fames luctus justo nostra ad cubilia blandit viverra, dictumst vehicula nec hendrerit senectus nibh semper dis. Nibh id facilisi in tristique tortor, ut nam auctor odio turpis, cubilia est netus hendrerit. Ridiculus penatibus nullam nunc commodo mauris pretium montes, fames hac cras cubilia arcu.Pretium class mollis auctor phasellus vehicula arcu sapien augue id, velit curabitur nunc massa quam semper nostra ligula. Fringilla semper urna quam sodales faucibus primis ornare scelerisque, varius placerat malesuada cum felis phasellus odio per, orci nascetur blandit senectus lacinia quis lectus. Aliquet pretium ultricies luctus primis imperdiet, nullam ultrices faucibus urna tristique mattis, magnis tellus aliquam fringilla. Fringilla nullam turpis libero gravida pulvinar felis nibh fermentum dui eget, ad tincidunt ultrices vivamus magna suspendisse himenaeos risus tortor praesent, inceptos mus rutrum consequat lacus dignissim penatibus faucibus eleifend. Porta nascetur facilisis cubilia duis ligula penatibus habitant, consequat at sem imperdiet pharetra est aenean commodo, mi dapibus felis condimentum sollicitudin mollis. Enim sollicitudin convallis fames fringilla pellentesque mattis, arcu vehicula lacus scelerisque curabitur torquent, rhoncus eleifend sociis tortor aenean. Diam rhoncus orci facilisi accumsan himenaeos velit imperdiet, vulputate nullam montes eget vivamus volutpat nunc hendrerit, pulvinar auctor a phasellus quisque neque. Imperdiet vel ullamcorper arcu sociis sem convallis, ultricies potenti tristique cubilia nam sollicitudin cum, curae quisque senectus laoreet diam.Gravida platea per elementum lectus montes vestibulum etiam fames, sapien dapibus nisl volutpat quam turpis lacus erat fermentum, molestie pretium auctor risus leo et integer. Bibendum commodo dis luctus natoque turpis lacus senectus a, volutpat fusce placerat auctor eros quis morbi, ornare cursus lectus pulvinar ligula magna mauris. Sodales suspendisse aptent hac tempor auctor proin bibendum ut habitant, accumsan imperdiet suscipit litora magna neque taciti. Dui habitasse auctor quam tellus pharetra, et phasellus penatibus sociosqu curabitur, a placerat tempus eleifend. Pharetra nunc dictumst morbi eros tristique tortor viverra fusce enim aptent, ornare curae turpis neque suscipit sed vel habitasse tempor semper, velit ante mus nisl felis nibh sodales facilisi proin. Ut penatibus nulla hac tempus litora nullam condimentum parturient, purus eleifend feugiat consequat himenaeos eros iaculis in faucibus, aptent nisi suspendisse tempor leo ad massa.Auctor natoque lacus litora convallis erat laoreet vitae, libero posuere ultrices tincidunt dictumst elementum pretium, fermentum proin fringilla sed dignissim imperdiet. Sodales senectus ut est lobortis orci mus ligula curae platea, purus pretium molestie erat sagittis natoque ridiculus vel, aliquet proin augue primis parturient integer aliquam tincidunt. Nisl etiam class erat feugiat sociosqu eget urna ultrices cursus massa, dignissim convallis faucibus arcu bibendum volutpat at pretium senectus, quisque rutrum netus ante porttitor eleifend fusce sodales curae. Proin justo elementum fames lectus rhoncus fringilla interdum ac aliquet, eget maecenas pretium curae iaculis rutrum metus dictum nam libero, neque placerat venenatis vehicula mollis auctor quis natoque. Justo ac odio orci quam sodales vulputate tempor risus accumsan libero, imperdiet morbi platea penatibus pellentesque quisque mollis massa. Dignissim cursus augue vehicula ornare hendrerit, scelerisque class urna enim nostra, torquent in vestibulum nam.";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(124, 124, 124);
+    z-index: 0;
+}
+body::before {
+    left: 0;
+}
+body::after {
+    right: 0;
+}
 
-  #fav-btn {
-    width: 7%;
-    height: 5%;
-  }
-  #fav-btn img {
-    width: 7%;
-    height: 5%;
-  }
+.all-posts {     
+  box-sizing: border-box;
+  width: 50%;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+.all-posts a {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255);
+  background-image: linear-gradient(to right, #000000, #bd0202);
+}
+
+#fav-btn {
+  width: 7%;
+  height: 5%;
+}
+#fav-btn img {
+  width: 7%;
+  height: 5%;
+}
+
+.header { 
+  background-image: url("/bleach-banner.jpg");
+  background-size: cover;
+  padding: 4% 0% 4% 0%;
+  text-shadow: 3px 3px rgb(0, 0, 0);
+  color: whitesmoke;
+
+} 
+.header a {    /*fix anchor width, not whole page*/
+  font-size: 7rem;
+  color: whitesmoke;
+  text-shadow: 6px 6px rgb(0, 0, 0);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0 auto;
+}
+.header nav a  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2rem;
+  color: whitesmoke;
+  /* text-shadow: 6px 6px rgb(0, 0, 0); */
+
+}
+
+.profile-link {
+  text-decoration: underline;
+  text-decoration-color: blue;
+
+}
+
+.logout-btn {
+  display: block;
+  font-weight: 300;
+}
+
+footer {
+  text-shadow: 3px 3px rgb(0, 0, 0);
+  color: whitesmoke;
+  font-size: 1rem;
+}

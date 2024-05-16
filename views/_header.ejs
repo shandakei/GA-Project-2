@@ -1,21 +1,22 @@
 <div class="header">
     <h1><a href="/">ComiCan</a></h1>
     <nav>
-   <a href="/share">share</a>
-
-   <% if (isLoggedIn) { %>
-
-    <p>Logged in as: <a href="/profile"><%= currentUser.email  %></a></p>
-
-    <form action="/logout?_method=delete" method="post">
-        <button>Logout</button>
-    </form>
+        
+        <% if (isLoggedIn) { %>
+            
+            <p>Logged in as: <a href="/profile" class="profile-link"><%= currentUser.email  %></a><br></p>
+            
+            
+            <form action="/logout?_method=delete" method="post">
+                <button id="logout-btn">Logout</button>
+            </form>
+            <a href="/share">share</a>
+            
+            <% } else { %>
+                <h4><a href="/login">Login</a></h4>
+                <%}%>
+            
+    <br>            
     
-    <% } else { %>
-        <h4><a href="/login">Login</a></h4>
-    <%}%>
-
-
-
 </nav>
 </div><!--header-->
