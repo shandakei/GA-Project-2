@@ -1,7 +1,7 @@
 
 <h1><%= post.title  %></h1>
 <br>
-<form action="/favourites" method="post">
+<form action="/favourites" method="post">  <!--HERE-->
     <label for="favourites"></label>
     <input type="hidden" name="post_id" value ="<%= post.id%>">
     <button id="fav-btn"><img src="https://i.imgur.com/Tt4JXmm.png" alt="">Favourite</button>
@@ -12,6 +12,7 @@
     <a href="<%= image.file_path  %>">
     <img src="<%= image.file_path  %>" alt="">
     </a>
+    
 <%}%>
 
 

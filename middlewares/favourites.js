@@ -5,13 +5,14 @@ const setCurrentUser = require('./set_current_user');
 const ensureLoggedIn = require('./ensureLoggedIn')
 
 
-router.post('/favourites', (req, res) => {
+router.post('/favourites', (req, res) => { //HERE
 
     const userId = req.session.userId
 
     const title = req.body.title;
-    const postId = req.body.postId;
-
+    const postId = req.body.post_id; //postId? post_id?
+    console.log(postId);
+    console.log(title);
     let sql = `
         INSERT INTO favourites (user_id, title, post_id)
         VALUES ($1, $2, $3);  
