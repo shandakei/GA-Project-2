@@ -10,7 +10,7 @@ Upon clicking on the title of a post that seems interesting, a details page of t
 
 Click the link below to check it out:
 
-[]
+[https://ga-project-2-864h.onrender.com/]
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
