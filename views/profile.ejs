@@ -2,9 +2,9 @@
 
 <h2>ID: <%= currentUser.email %></h2>
 
-<% for (let fav of favourites) {%> 
+<% for (let posts of favourites) {%> 
         
-    <h3><a href="<%= fav.file_path  %>">
-    <%= fav.title%>
+    <h3><a href="<%= posts.posts_id  %>">
+    <%= posts.title%>
     </a></h3>
 <%}%>

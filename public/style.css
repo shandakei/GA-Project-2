@@ -66,10 +66,13 @@ body::after {
 #fav-btn {
   width: 7%;
   height: 5%;
+  text-wrap: auto;
 }
 #fav-btn img {
-  width: 7%;
-  height: 5%;
+  width: 20%;
+  min-width: 10px;
+  height: 20%;
+  min-height: 10px;
 }
 
 .header { 

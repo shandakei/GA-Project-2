@@ -6,6 +6,7 @@ const port = 9090
 
 
 const expressLayout = require('express-ejs-layouts')
+const requestLogger = require('./middlewares/request_logger')
 const methodOverride = require('method-override')
 
 const setCurrentUser = require('./middlewares/set_current_user')
@@ -29,6 +30,7 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded())
 
 
+app.use(requestLogger)
 
 
 app.use(session({

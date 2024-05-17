@@ -44,9 +44,9 @@ COMMITS
 
 6th commit - CRUD almost finished, working edit/img submission
 
-7th commit - final#1
+7th commit - README
 
-8th commit - final#2
+8th commit - final#1
 
 
 MISCELLANEOUS:
@@ -103,3 +103,5 @@ Working front-end is like throwing a ball at a bumpy wall and having to catch it
 Working full-stack is like throwing a ball at a bumpy wall, then it has to hit 6 other walls in the right place, then catching it one handed with your off-hand.
 
 As usual, planning ahead is key. Without a flow diagram and trello dashboard to keep track of my progress, this project would have taken twice as long.
+
+Either, do not make your code more complicated when working with servers and databases when debugging an error OR handle errors at every 1 or 2 new lines of code.
